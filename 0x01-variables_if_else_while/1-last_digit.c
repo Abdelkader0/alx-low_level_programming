@@ -1,4 +1,4 @@
-#tdio.h>
+#stdio.h>
 /**
  * main - Check the last digit
  *
