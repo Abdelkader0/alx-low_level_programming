@@ -15,7 +15,8 @@ while (i < 10)
 while (alpha <= 'z')
 {
 _putchar(alpha);
-alpha++}
+alpha++;
+}
 _putchar('\n');
 alpha = 'a';
 i++;
