@@ -33,7 +33,7 @@ n = p;
 num1 = num2;
 num2 = next;
 if (p >= 100)
-{	
+{
 printf("%lu%lu", next, p);
 }
 else
