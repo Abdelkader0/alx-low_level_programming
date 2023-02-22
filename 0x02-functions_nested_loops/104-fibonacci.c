@@ -26,8 +26,8 @@ num2 /= 1000;
 while (i <= 98)
 {
 carry = (m + n) / 1000;
-p = (m + n) - carry * 1000;
-next = (num1 + num2) + carry;
+p = (m + n) -carry * 1000;
+next = (num1 + num2) +carry;
 m = n;
 n = p;
 num1 = num2;
