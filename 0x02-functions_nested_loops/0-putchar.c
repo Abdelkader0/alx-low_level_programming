@@ -1,10 +1,14 @@
 #include "main.h"
 
 /**
- *  * **main-Print_putchar
- *   * **Return:Always0
- *    * **/
-int main(void){
+*  * **main-Print_putchar
+*   * **Return:Always0
+*
+*
+**/
+
+int main(void)
+{
 	char str[] = "_putchar";
 	int i;
 
