@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 int main(void)
@@ -7,5 +8,5 @@ char buffer[] = "This is a string!\0And this is the rest of the #buffer :)\1\2\3
 printf("%s\n", buffer);
 printf("---------------------------------\n");
 print_buffer(buffer, sizeof(buffer));
-return 0;
+return (0);
 }
