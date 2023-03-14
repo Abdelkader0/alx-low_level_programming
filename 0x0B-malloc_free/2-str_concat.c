@@ -1,36 +1,42 @@
-#include "main.h"
-#include <stddef.h>
+#include <stdlib.h>
 
 /**
- * str_concat - a function that concatenates two strings.
- * @s1:First string
- * @s2:Second string
- *
- * Return: NULL in case of failure , but pointer to new string in
- * case of success
+ * str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: pointer to the new concatenated strings
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	char *concat_str;
-	int index, concat_index = 0,  len = 0;
+	char *arr;
+	int s1_count, s2_count, size, i;
 
 	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
 		s2 = "";
-
-	for (index = 0; s1[index] || s2[index]; index++)
-		len++;
-
-	concat_str = malloc(sizeof(char) * len);
-
-	if (concat_str == NULL)
+	for (s1_count = 0; s1[s1_count] != '\0'; s1_count++)
+		;
+	for (s2_count = 0; s2[s2_count] != '\0'; s2_count++)
+		;
+	size = s1_count + s2_count + 1;
+	arr = malloc(size * sizeof(char));
+	if (arr == NULL)
+	{
+		free(arr);
 		return (NULL);
-
-	for (index = 0; s1[index]; index++)
-		concat_str[concat_index++] = s1[index];
-
-	for (index = 0; s2[index]; index++)
-		concat_str[concat_index++] = s2[index];
-
-	return (concat_str);
+	}
+	for (i = 0; i < size; i++)
+	{
+		if (i < s1_count)
+		{
+			arr[i] = s1[i];
+		}
+		else
+		{
+			arr[i] = s2[i - s1_count];
+		}
+	}
+	return (arr);
 }
