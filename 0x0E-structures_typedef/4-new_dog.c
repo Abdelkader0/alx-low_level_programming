@@ -47,6 +47,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (doggy == NULL)
 		return (NULL);
-	else 
+	else
 		return (doggy);
 }
