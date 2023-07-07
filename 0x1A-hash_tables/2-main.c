@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-    char *s;
+	char *s;
     unsigned long int hash_table_array_size;
 
     hash_table_array_size = 1024;
